@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'data_mapper'
+require 'sqlite3'
 require 'dm-sqlite-adapter'
+
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/myapp.db")
 
