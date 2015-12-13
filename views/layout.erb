@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset='UTF-8' />
+    <title>MyApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href = '/'>Home</a></li>
+                    <li><a href = '/about'>About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+        <h1><%= @title%></h1>
+        <%= yield %>
+        </div>
+    </body>
+</html>

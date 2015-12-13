@@ -1,3 +1,20 @@
-<h1><%= @title %></h1>
-<p><%= @yield %></p>
- 
+<p>It's my first real app, that I build myself.</p>
+<section id="add">
+  <form action="/" method="post">
+    <textarea name="content" placeholder="Your note&hellip;"></textarea>
+    <input type="submit" value="Take Note!">
+  </form>
+</section>
+
+<% @notes.each do |note|%>
+<article <%= 'class="complete"' if note.complete %>>
+    <p>
+        <%= note.content %>
+        <span><a href="/<% note.id %>"[edit]></a></span>
+    </p>
+        <p class="links">
+            <a href="/<% note.id %>/complete"></a>
+            </p>
+            <p class="meta">Created: <%= note.created_at%></p>
+</article>
+<% end %>
