@@ -74,5 +74,5 @@ PLATFORMS
 DEPENDENCIES
   datamapper
   dm-sqlite-adapter (~> 1.2)
-  do_sqlite3 (~> 0.10.16)
+  do_sqlite3
   sinatra
