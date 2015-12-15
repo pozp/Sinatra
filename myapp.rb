@@ -32,10 +32,24 @@ post '/' do
 end
 
 
-get '/about' do   #kolejna strona
+get '/about' do   #HTTP tutaj metoda "get", czyli pobranie tresci z /about
     @title = "About"
     erb :about
 end
     
+get '/:id' do
+    @note = Note.get params[:id]
+    @title = "Edit note: #{params [:id]}"
+    erb :edit
+end
+
+put '/:id' do
+    n = Note.get params [:id]
+    n.content = params [:content]
+    n.complete = params [:complete] ? 1 : 0
+    n.updated_at = Time.now
+    n.save
+    redirect '/'
+end
 
 
