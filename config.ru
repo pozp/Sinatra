@@ -1,2 +1,2 @@
 require './myapp'
-run Sinatra::Applicationheroku
+run Sinatra::Application
